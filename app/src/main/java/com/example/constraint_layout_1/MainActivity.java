@@ -33,14 +33,24 @@ public class MainActivity extends AppCompatActivity {
                             "Email : " + mail + " dan Password : " + pwd + " | Login Sukses", Toast.LENGTH_LONG);
                     t.show();
                 }
-                else if(mail.equals("") && pwd.equals("")) {
+                else if(mail.equals("") || pwd.equals("")){
                     Toast t = Toast.makeText(getApplicationContext(),
-                            "Kolom Email dan Password Tidak Boleh Kosong !!!", Toast.LENGTH_LONG);
+                            "Email dan Password Tidak Boleh Kosong", Toast.LENGTH_LONG);
                     t.show();
                 }
-                else {
+                else if(!mail.equals("fadhil@mail.com") && pwd.equals("12345678")){
                     Toast t = Toast.makeText(getApplicationContext(),
-                            "Email atau Password Salah !!!", Toast.LENGTH_LONG);
+                            "Email Salah !!!", Toast.LENGTH_LONG);
+                    t.show();
+                }
+                else if(mail.equals("fadhil@mail.com") && !pwd.equals("12345678")) {
+                    Toast t = Toast.makeText(getApplicationContext(),
+                            "Password Salah !!!", Toast.LENGTH_LONG);
+                    t.show();
+                }
+                else if(!mail.equals("fadhil@mail.com") && !pwd.equals("12345678")){
+                    Toast t = Toast.makeText(getApplicationContext(),
+                            "Email dan Password Salah !!!", Toast.LENGTH_LONG);
                     t.show();
                 }
             }
