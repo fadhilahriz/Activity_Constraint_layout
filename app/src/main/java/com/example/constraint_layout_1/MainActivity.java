@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
                             "Email : " + mail + " dan Password : " + pwd + " | Login Sukses", Toast.LENGTH_LONG);
                     t.show();
                 }
+                else if(mail.equals("") && pwd.equals("")) {
+                    Toast t = Toast.makeText(getApplicationContext(),
+                            "Kolom Email dan Password Tidak Boleh Kosong !!!", Toast.LENGTH_LONG);
+                    t.show();
+                }
                 else {
                     Toast t = Toast.makeText(getApplicationContext(),
                             "Email atau Password Salah !!!", Toast.LENGTH_LONG);
