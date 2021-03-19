@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         btsignin=findViewById(R.id.button1);
         edmail=findViewById(R.id.editText1);
         edpwd=findViewById(R.id.editText2);
