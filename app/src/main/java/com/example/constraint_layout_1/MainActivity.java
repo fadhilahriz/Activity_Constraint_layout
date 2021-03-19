@@ -2,6 +2,7 @@ package com.example.constraint_layout_1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,8 +31,16 @@ public class MainActivity extends AppCompatActivity {
 
                 if(mail.equals("fadhil@mail.com") && pwd.equals("12345678")) {
                     Toast t = Toast.makeText(getApplicationContext(),
-                            "Email : " + mail + " dan Password : " + pwd + " | Login Sukses", Toast.LENGTH_LONG);
+                            "Login Sukses", Toast.LENGTH_LONG);
                     t.show();
+
+                    Bundle b = new Bundle();
+                    b.putString("p1",mail.trim());
+                    b.putString("p2",pwd.trim());
+
+                    Intent i = new Intent(MainActivity.this, Hal2.class );
+                    i.putExtras(b);
+                    startActivity(i);
                 }
                 else if(mail.equals("") || pwd.equals("")){
                     Toast t = Toast.makeText(getApplicationContext(),
