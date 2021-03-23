@@ -1,9 +1,12 @@
 package com.example.constraint_layout_1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         btsignin=findViewById(R.id.button1);
         edmail=findViewById(R.id.editText1);
         edpwd=findViewById(R.id.editText2);
-
         btsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,5 +66,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu1,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.mnDaftar)
+        {
+            Intent in = new Intent(getApplicationContext(), halreg.class);
+            startActivity(in);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
