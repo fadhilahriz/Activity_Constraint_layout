@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.mnDaftar)
         {
-            Intent in = new Intent(getApplicationContext(), halreg.class);
+            Intent in = new Intent(getApplicationContext(), Home_Act.class);
             startActivity(in);
         }
         return super.onOptionsItemSelected(item);

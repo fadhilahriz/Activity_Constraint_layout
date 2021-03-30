@@ -8,10 +8,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Constraint_layout_1">
+        <activity android:name=".ActLihatData" android:parentActivityName=".Home_Act" android:label="@string/app_name"/>
+        <activity android:name=".Home_Act" android:parentActivityName=".MainActivity" android:label="@string/app_name"/>
         <activity
             android:name=".halreg"
-            android:parentActivityName=".MainActivity">
-        </activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

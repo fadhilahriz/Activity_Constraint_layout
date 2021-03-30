@@ -16,4 +16,13 @@
     <string name="epass">Masukkan Password</string>
     <string name="erepass">Masukkan Password Kembali</string>
     <string name="ealamat">Masukan Alamat</string>
+
+    <string name="lihatdata">Lihat Data</string>
+    <string name="eddata">Edit Data</string>
+    <string name="datakontak">Data Kontak</string>
+    <string name="nmitem">Nama Item</string>
+    <string name="detailkontak">Detail Kontak</string>
+    <string name="nm">Nama</string>
+    <string name="notel">Nomor Telepon</string>
+
 </resources>
